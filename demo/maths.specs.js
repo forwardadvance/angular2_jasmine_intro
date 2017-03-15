@@ -2,33 +2,31 @@
 
 describe('working tests', () => {
   it('should work', () => {
-    var x = [1,2,3]
-    expect(x instanceof Array).toEqual(true);
-    expect(x.length).toBeDefined();
-    expect(x.length).toBe(3);
+    expect(1+1).toBe(2);
+    expect({}).toEqual({});
   })
 })
 
-describe('maths', () => {
-  describe('sum', () => {
-    it('should add two numbers', () => {
-      expect(maths.sum(2,4)).toBe(6);
-      expect(maths.sum(1,9)).toBe(10);
+describe('Maths', () => {
+  describe('maths.sum', () => {
+    it('should sum two numbers', ()=> {
+      var result = maths.sum(1,1);
+      expect(result).toBe(2)
     })
-    it('should deal with undefined', () => {
-      expect(maths.sum()).toEqual(NaN);
+  });
+  describe('maths.mult', () => {
+    it('should multiply two numbers', ()=> {
+      var result = maths.mult(3,6);
+      expect(result).toBe(18);
+      var result = maths.mult(3,4);
+      expect(result).toBe(12)
     })
-  })
+  });
 
-  describe('subtract', () => {
-    it('should subtract two numbers', () => {
-      expect(maths.subtract(2,1)).toBe(1);
-      expect(maths.subtract(10,20)).toBe(-10);
-    })
-  })
-});
+})
 
-var x = {a:1, b:2}
+
+
 
 
 
